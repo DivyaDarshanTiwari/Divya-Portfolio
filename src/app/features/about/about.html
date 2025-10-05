@@ -1,0 +1,182 @@
+<div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+  <div class="max-w-5xl mx-auto px-6 py-16">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">About Me</h1>
+      <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Education Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+        <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+        Education
+      </h2>
+      <div class="space-y-6">
+        @for(edu of education; track edu){
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+            <h3 class="text-lg font-semibold text-slate-900">{{ edu.degree }}</h3>
+            <span class="text-sm text-slate-600">{{ edu.period }}</span>
+          </div>
+          <p class="text-slate-700 mb-1">{{ edu.institution }} • {{ edu.location }}</p>
+          <p class="text-blue-600 font-medium">{{ edu.score }}</p>
+        </div>
+        }
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+        <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+        Skills
+      </h2>
+      <div class="bg-white rounded-xl p-6 shadow-sm space-y-6">
+        <div>
+          <h3 class="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-3">
+            Languages
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            @for(lang of skills.languages; track lang){
+            <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium">
+              {{ lang }}
+            </span>
+            }
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-3">
+            Frameworks & Libraries
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            @for(framework of skills.frameworks; track framework){
+            <span class="px-4 py-2 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium">
+              {{ framework }}
+            </span>
+            }
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-3">
+            Tools & Platforms
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            @for( tool of skills.tools; track tool){
+            <span class="px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg text-sm font-medium">
+              {{ tool }}
+            </span>
+            }
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-3">
+            Soft Skills
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            @for( skill of skills.softSkills; track skill){
+            <span class="px-4 py-2 bg-amber-50 text-amber-700 rounded-lg text-sm font-medium">
+              {{ skill }}
+            </span>
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+        <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+        Experience
+      </h2>
+      <div class="space-y-6">
+        @for( exp of experience; track exp){
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+            <h3 class="text-xl font-semibold text-slate-900">{{ exp.company }}</h3>
+            <span class="text-sm text-slate-600">{{ exp.period }}</span>
+          </div>
+          <ul class="space-y-2">
+            @for( resp of exp.responsibilities; track resp){
+            <li class="text-slate-700 flex gap-3">
+              <span class="text-blue-600 mt-1.5">•</span>
+              <span>{{ resp }}</span>
+            </li>
+            }
+          </ul>
+        </div>
+        }
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+        <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+        Projects
+      </h2>
+      <div class="space-y-6">
+        @for( project of projects; track project){
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+            <h3 class="text-xl font-semibold text-slate-900">{{ project.name }}</h3>
+            <span class="text-sm text-slate-600">{{ project.period }}</span>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">
+            <span class="font-medium">Tools:</span> {{ project.tools }}
+          </p>
+          <ul class="space-y-2">
+            @for( desc of project.description; track desc){
+            <li class="text-slate-700 flex gap-3">
+              <span class="text-blue-600 mt-1.5">•</span>
+              <span>{{ desc }}</span>
+            </li>
+            }
+          </ul>
+        </div>
+        }
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+        <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+        Achievements
+      </h2>
+      <div class="bg-white rounded-xl p-6 shadow-sm">
+        <ul class="space-y-3">
+          @for( achievement of achievements; track achievement){
+          <li class="text-slate-700 flex gap-3">
+            <span class="text-blue-600 mt-1.5">•</span>
+            <span>{{ achievement }}</span>
+          </li>
+          }
+        </ul>
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+        <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+        Leadership & Responsibility
+      </h2>
+      <div class="space-y-6">
+        @for( role of leadership; track role){
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+            <h3 class="text-lg font-semibold text-slate-900">{{ role.title }}</h3>
+            <span class="text-sm text-slate-600">{{ role.period }}</span>
+          </div>
+          <p class="text-slate-700">{{ role.description }}</p>
+        </div>
+        }
+      </div>
+    </section>
+  </div>
+</div>

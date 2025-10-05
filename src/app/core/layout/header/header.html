@@ -7,7 +7,7 @@
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center gap-6">
       @for(item of routes; track item.name) {
-      <a href="{{ item.path }}" class="text-sm font-medium text-gray-600 hover:text-black">{{
+      <a routerLink="{{ item.path }}" class="text-sm font-medium text-gray-600 hover:text-black">{{
         item.name
       }}</a>
       }
