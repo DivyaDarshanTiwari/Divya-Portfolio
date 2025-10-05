@@ -1,0 +1,4 @@
+/* Optional: smooth hover effect */
+img {
+  transition: transform 0.3s ease-in-out;
+}
