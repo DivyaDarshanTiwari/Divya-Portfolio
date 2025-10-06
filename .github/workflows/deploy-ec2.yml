@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build and Push
-    runs-on: Ubantu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -24,7 +24,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Login to Docker
-        run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p  "${{ secrets.DOCKER_PASSWORD }}"
+        run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
@@ -37,14 +37,19 @@ jobs:
     name: Deploy to EC2
     runs-on: self-hosted
     needs: build
+
     steps:
-      - name: Docker pull image
-        uses: sudo docker pull ${{ secrets.DOCKER_USERNAME }}/divya-portfolio:latest
+      - name: Login to Docker
+        run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
 
-      - name: docker stop container
-        run: sudo docker stop divya-portfolio || true
-      - name: docker rm container
-        run: sudo docker rm divya-portfolio || true
+      - name: Pull latest Docker image
+        run: docker pull ${{ secrets.DOCKER_USERNAME }}/divya-portfolio:latest
 
-      - name: docker run container
-        run: sudo docker run -d -p 4200:4200 --name divya-portfolio ${{ secrets.DOCKER_USERNAME }}/divya-portfolio:latest
+      - name: Stop existing container
+        run: docker stop divya-portfolio || true
+
+      - name: Remove existing container
+        run: docker rm divya-portfolio || true
+
+      - name: Run new container
+        run: docker run -d -p 4200:4200 --name divya-portfolio ${{ secrets.DOCKER_USERNAME }}/divya-portfolio:latest
