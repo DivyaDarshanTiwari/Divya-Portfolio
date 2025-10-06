@@ -39,16 +39,16 @@ jobs:
 
     steps:
       - name: Login to Docker
-        run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
+        run: sudo docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
 
       - name: Pull latest Docker image
-        run: docker pull ${{ secrets.DOCKER_USERNAME }}/divya-portfolio:latest
+        run: sudo docker pull ${{ secrets.DOCKER_USERNAME }}/divya-portfolio:latest
 
       - name: Stop existing container
-        run: docker stop divya-portfolio || true
+        run: sudo docker stop divya-portfolio || true
 
       - name: Remove existing container
-        run: docker rm divya-portfolio || true
+        run: sudo docker rm divya-portfolio || true
 
       - name: Run new container
-        run: docker run -d -p 4200:4200 --name divya-portfolio ${{ secrets.DOCKER_USERNAME }}/divya-portfolio:latest
+        run: sudo docker run -d -p 4200:4200 --name divya-portfolio ${{ secrets.DOCKER_USERNAME }}/divya-portfolio:latest
