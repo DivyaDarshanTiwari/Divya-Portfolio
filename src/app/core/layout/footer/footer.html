@@ -11,10 +11,12 @@
     <!-- Navigation Links -->
     <div class="flex flex-col gap-2">
       <h3 class="font-semibold text-white">Quick Links</h3>
-      <a href="#" class="hover:text-white transition-colors text-sm">Home</a>
-      <a href="#" class="hover:text-white transition-colors text-sm">About</a>
-      <a href="#" class="hover:text-white transition-colors text-sm">Projects</a>
-      <a href="#" class="hover:text-white transition-colors text-sm">Contact</a>
+      <a [routerLink]="['/']" class="hover:text-white transition-colors text-sm">Home</a>
+      <a [routerLink]="['/about']" class="hover:text-white transition-colors text-sm">About</a>
+      <a [routerLink]="['/projects']" class="hover:text-white transition-colors text-sm"
+        >Projects</a
+      >
+      <a [routerLink]="['/']" class="hover:text-white transition-colors text-sm">Contact</a>
     </div>
 
     <!-- Social / Contact -->
@@ -22,9 +24,24 @@
       <h3 class="font-semibold text-white">Contact</h3>
       <p class="text-sm">ddarshantiwari@example.com</p>
       <div class="flex gap-3 mt-1">
-        <a href="#" class="hover:text-white transition-colors">Twitter</a>
-        <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
-        <a href="#" class="hover:text-white transition-colors">GitHub</a>
+        <a
+          href="https://leetcode.com/u/Ddt16/"
+          target="_blank"
+          class="hover:text-white transition-colors"
+          >LeetCode</a
+        >
+        <a
+          href="https://www.linkedin.com/in/divya-darshan-tiwari-9b6981240/"
+          class="hover:text-white transition-colors"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/DivyaDarshanTiwari"
+          class="hover:text-white transition-colors"
+          target="_blank"
+          >GitHub</a
+        >
       </div>
     </div>
   </div>
