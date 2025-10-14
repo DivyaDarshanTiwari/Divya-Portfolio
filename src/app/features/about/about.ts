@@ -76,39 +76,6 @@ export class About {
     },
   ];
 
-  projects = [
-    {
-      name: 'Expensely',
-      period: 'June 2025 – July 2025',
-      tools:
-        'React Native, Node.js, Express, Gemini API, Firebase Auth, Tesseract.js, Cloudinary, PostgreSQL, Redis',
-      description: [
-        'Built a cross-platform expense tracker app with instant receipt scanning using Tesseract.js and Gemini API, live in beta for users with real-time expense logging.',
-        'Architected and built the backend architecture, including User Service, Dashboard Service and OCR Service with robust endpoints for user and expense management.',
-        'Implemented secure authentication and user management using Firebase Authentication, ensuring safe access for beta users and streamlining the login process.',
-      ],
-    },
-    {
-      name: 'Trekker On the Go',
-      period: 'August 2024 – November 2024',
-      tools: 'JavaScript, Node.js, Express.js, React.js, MongoDB, WebSocket, Data Structure',
-      description: [
-        'Formulated the architecture and flow for a real-time trekker coordination system addressing irregular trekker timings in front of the college.',
-        'Created APIs for seamless student–driver communication and integrated WebSocket based notifications for instant trekker availability and movement updates.',
-        'Applied secure role-based authentication and authorization using JWT in the backend.',
-      ],
-    },
-    {
-      name: 'Dummy Hotstar',
-      period: 'March 2024 – April 2024',
-      tools: 'Angular, Typescript, Angular Material , Postman',
-      description: [
-        ' Built a cross-browser compatible Hotstar-like frontend integrating APIs with pagination, lazy loading and a modular service layer for efficient data handling and performance.',
-        'Secured application routes with AuthGuard and implemented clean architecture with dependency injection,ensuring maintainability, scalability and reliable user access control.',
-      ],
-    },
-  ];
-
   achievements = [
     'Completed AWS CloudQuest: Cloud Practitioner with hands-on experience with AWS Cloud Services and security services.',
     'Solved 200+ problems on LeetCode, strengthening problem-solving and algorithmic skills.',
