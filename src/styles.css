@@ -1,2 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss';
+
+.mat-mdc-tooltip .mdc-tooltip__surface {
+  @apply bg-gray-600 text-white rounded-xl;
+}

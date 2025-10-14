@@ -18,6 +18,7 @@ export class Projects {
         'Built a cross-platform expense tracker app with instant receipt scanning using Tesseract.js and Gemini API, live in beta for users with real-time expense logging.',
       ],
       image: './expensely.jpg',
+      link: 'https://drive.google.com/drive/folders/1j0xGV2Yh4Tin_hP97gZf1tf0JQlUBloQ?usp=sharing',
     },
     {
       name: 'Trekker On the Go',
@@ -27,6 +28,7 @@ export class Projects {
         'Formulated the architecture and flow for a real-time trekker coordination system addressing irregular trekker timings in front of the college.',
       ],
       image: './trekker-on-the-go.png',
+      link: 'https://github.com/DivyaDarshanTiwari/Trekker-On-the-Go',
     },
     {
       name: 'Dummy Hotstar',
@@ -36,6 +38,7 @@ export class Projects {
         ' Built a cross-browser compatible Hotstar-like frontend integrating APIs with pagination, lazy loading and a modular service layer for efficient data handling and performance.',
       ],
       image: './dummy-hotstar.png',
+      link: 'https://dummy-hotstar.vercel.app/',
     },
   ];
 }
