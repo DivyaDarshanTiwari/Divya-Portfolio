@@ -23,15 +23,11 @@
   @if (mobileMenuOpen) {
   <div class="border-t border-gray-200 bg-gray-50 md:hidden">
     <nav class="flex flex-col gap-4 p-4">
-      <a href="#" class="text-sm font-medium text-gray-600 hover:text-black">Features</a>
-      <a href="#" class="text-sm font-medium text-gray-600 hover:text-black">Docs</a>
-      <a href="#" class="text-sm font-medium text-gray-600 hover:text-black">Blog</a>
-      <a href="#" class="text-sm font-medium text-gray-600 hover:text-black">Pricing</a>
-
-      <div class="flex flex-col gap-2 pt-4">
-        <button class="border border-gray-300 py-2 rounded">Sign In</button>
-        <button class="bg-blue-600 text-white py-2 rounded">Get Started</button>
-      </div>
+      @for(item of routes; track item.name) {
+      <a routerLink="{{ item.path }}" class="text-sm font-medium text-gray-600 hover:text-black">{{
+        item.name
+      }}</a>
+      }
     </nav>
   </div>
   }
