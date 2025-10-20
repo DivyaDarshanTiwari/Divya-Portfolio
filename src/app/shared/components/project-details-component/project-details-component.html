@@ -1,5 +1,15 @@
-<div>
-  <div class="h-16 w-16 text-black-300">{{ projectToDisplay?.name }}</div>
+<div class="px-24 pb-24 flex-col gap-16">
+  <div
+    class="flex items-center justify-center md:h-80 md:w-full rounded-xl rounded-t transition-all duration-700 ease-in-out cursor-pointer"
+    [ngStyle]="{
+      'background-color': projectToDisplay?.color || '#E9D5FF',
+      'box-shadow': isHovered ? '0 10px 25px rgba(0, 0, 0, 0.25)' : '0 0 0 rgba(0, 0, 0, 0)'
+    }"
+    (mouseenter)="isHovered = true"
+    (mouseleave)="isHovered = false"
+  >
+    <p class="text-6xl font-bold text-gray-800">{{ projectToDisplay?.name }}</p>
+  </div>
   <div></div>
   <div></div>
   <div></div>

@@ -1,5 +1,6 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 type ProjectDetailsComponentType = {
   id: number;
@@ -12,11 +13,12 @@ type ProjectDetailsComponentType = {
   FeatureImplemented: String[];
   image: String;
   link: String;
+  color?: String;
 };
 
 @Component({
   selector: 'app-project-details-component',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './project-details-component.html',
   styleUrl: './project-details-component.css',
 })
@@ -25,6 +27,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
   projectId = -1;
   projectToDisplay: ProjectDetailsComponentType | undefined;
   destory$: any;
+  isHovered = false;
   ngOnInit(): void {
     this.destory$ = this.route.paramMap.subscribe((params) => {
       this.projectId = Number(params.get('id'));
@@ -57,6 +60,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       ],
       image: './expensely.jpg',
       link: 'https://drive.google.com/drive/folders/1j0xGV2Yh4Tin_hP97gZf1tf0JQlUBloQ?usp=sharing',
+      color: '#E9D5FF',
     },
     {
       id: 2,
@@ -80,6 +84,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       ],
       image: './trekker-on-the-go.png',
       link: 'https://github.com/DivyaDarshanTiwari/Trekker-On-the-Go',
+      color: '#59c1eeff',
     },
     {
       id: 3,
@@ -95,6 +100,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       ],
       image: './dummy-hotstar.png',
       link: 'https://dummy-hotstar.vercel.app/',
+      color: '#ff9f19aa',
     },
   ];
 
