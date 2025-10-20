@@ -10,6 +10,7 @@ import { ProjectCards } from '../../shared/components/project-cards/project-card
 export class Projects {
   projects = [
     {
+      id: 1,
       name: 'Expensely',
       period: 'June 2025 – July 2025',
       tools:
@@ -21,6 +22,7 @@ export class Projects {
       link: 'https://drive.google.com/drive/folders/1j0xGV2Yh4Tin_hP97gZf1tf0JQlUBloQ?usp=sharing',
     },
     {
+      id: 2,
       name: 'Trekker On the Go',
       period: 'August 2024 – November 2024',
       tools: 'JavaScript, Node.js, Express.js, React.js, MongoDB, WebSocket, Data Structure',
@@ -31,6 +33,7 @@ export class Projects {
       link: 'https://github.com/DivyaDarshanTiwari/Trekker-On-the-Go',
     },
     {
+      id: 3,
       name: 'Dummy Hotstar',
       period: 'March 2024 – April 2024',
       tools: 'Angular, Typescript, Angular Material , Postman',

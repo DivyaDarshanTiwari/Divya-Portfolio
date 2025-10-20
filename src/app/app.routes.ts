@@ -13,4 +13,11 @@ export const routes: Routes = [
     path: 'projects',
     loadComponent: () => import('./features/projects/projects').then((m) => m.Projects),
   },
+  {
+    path: 'project/:id',
+    loadComponent: () =>
+      import('./shared/components/project-details-component/project-details-component').then(
+        (m) => m.ProjectDetailsComponent
+      ),
+  },
 ];

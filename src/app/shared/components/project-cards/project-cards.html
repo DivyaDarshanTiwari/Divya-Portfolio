@@ -14,8 +14,7 @@
       {{ project.description }}
     </p>
     <a
-      [href]="project.link"
-      target="_blank"
+      [routerLink]="['/project', project.id]"
       class="inline-block text-blue-600 font-medium hover:underline"
       >View Project</a
     >
