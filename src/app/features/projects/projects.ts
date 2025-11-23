@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ProjectCards } from '../../shared/components/project-cards/project-cards';
 
 @Component({
@@ -8,7 +8,7 @@ import { ProjectCards } from '../../shared/components/project-cards/project-card
   styleUrl: './projects.css',
 })
 export class Projects {
-  projects = [
+  projects = signal([
     {
       id: 1,
       name: 'Expensely',
@@ -43,5 +43,5 @@ export class Projects {
       image: './dummy-hotstar.png',
       link: 'https://dummy-hotstar.vercel.app/',
     },
-  ];
+  ]);
 }

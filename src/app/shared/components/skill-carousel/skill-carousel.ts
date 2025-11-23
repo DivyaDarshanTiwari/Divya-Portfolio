@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-skill-carousel',
@@ -10,7 +10,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class SkillCarousel {
   /** Array of skill icons (URLs or paths) */
 
-  protected skills: string[] = [
+  protected skills = signal<string[]>([
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
@@ -28,5 +28,5 @@ export class SkillCarousel {
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
     'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-  ];
+  ]);
 }

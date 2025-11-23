@@ -1,4 +1,4 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -31,11 +31,11 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.destory$ = this.route.paramMap.subscribe((params) => {
       this.projectId = Number(params.get('id'));
-      this.projectToDisplay = this.projects.find((p) => p.id === this.projectId);
+      this.projectToDisplay = this.projects().find((p) => p.id === this.projectId);
     });
   }
 
-  projects: ProjectDetailsComponentType[] = [
+  projects = signal<ProjectDetailsComponentType[]>([
     {
       id: 1,
       name: 'Expensely',
@@ -102,7 +102,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
       link: 'https://dummy-hotstar.vercel.app/',
       color: '#ff9f19aa',
     },
-  ];
+  ]);
 
   ngOnDestroy(): void {
     // Cleanup if needed

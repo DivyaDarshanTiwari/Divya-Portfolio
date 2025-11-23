@@ -2,19 +2,19 @@
   class="border border-gray-200 rounded-2xl shadow-md overflow-hidden w-80 transition-transform transform hover:scale-105 hover:shadow-xl bg-white"
 >
   <img
-    [src]="project.image"
-    alt="{{ project.title }}"
+    [src]="project().image"
+    alt="{{ project().title }}"
     class="w-full h-48 object-cover"
-    matTooltip="Tools: {{ project.tools }}"
+    matTooltip="Tools: {{ project().tools }}"
     matTooltipPosition="after"
   />
   <div class="p-4 space-y-2">
-    <h3 class="text-lg font-semibold text-gray-800">{{ project.title }}</h3>
+    <h3 class="text-lg font-semibold text-gray-800">{{ project().title }}</h3>
     <p class="text-gray-600 text-sm">
-      {{ project.description }}
+      {{ project().description }}
     </p>
     <a
-      [routerLink]="['/project', project.id]"
+      [routerLink]="['/project', project().id]"
       class="inline-block text-blue-600 font-medium hover:underline"
       >View Project</a
     >

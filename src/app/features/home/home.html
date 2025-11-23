@@ -11,12 +11,12 @@
 
     <!-- Description -->
     <p class="mt-4 text-gray-600 whitespace-pre-line leading-relaxed">
-      {{ introduction.description }}
+      {{ introduction().description }}
     </p>
 
     <!-- Ending statement / CTA -->
     <p class="mt-4 text-indigo-600 font-semibold text-lg">
-      {{ introduction.ending }}
+      {{ introduction().ending }}
     </p>
 
     <!-- Buttons -->
@@ -37,7 +37,7 @@
   <!-- Right section: Photo -->
   <div class="flex-1 mt-10 md:mt-0 md:ml-16 flex justify-center">
     <img
-      src="{{ introduction.photoUrl }}"
+      src="{{ introduction().photoUrl }}"
       alt="Divya Tiwari"
       class="w-64 h-64 md:w-100 md:h-100 object-cover rounded-full shadow-xl border-4 border-indigo-100"
     />

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.css',
 })
 export class About {
-  education = [
+  education = signal([
     {
       degree: 'BTech Hons. (CSE) In Full Stack AI',
       institution: 'UPES',
@@ -29,9 +29,9 @@ export class About {
       period: 'April 2018 – March 2019',
       score: 'Percentage: 93.6',
     },
-  ];
+  ]);
 
-  skills = {
+  skills = signal({
     languages: ['Java', 'JavaScript', 'HTML5', 'CSS3', 'SQL'],
     frameworks: ['Angular', 'Express.js'],
     tools: [
@@ -47,9 +47,9 @@ export class About {
     ],
     coursework: ['Data Structures and Algorithms', 'OOP', 'RDBMS', 'DevOps'],
     softSkills: ['Teamwork and Collaboration', 'Adaptive', 'Resilience', 'Time management'],
-  };
+  });
 
-  experience = [
+  experience = signal([
     {
       company: 'Xebia',
       period: 'June 2025 – July 2025',
@@ -74,14 +74,14 @@ export class About {
         'Applied concepts such as component based architecture and state management strengthening my expertise in modern frontend development.',
       ],
     },
-  ];
+  ]);
 
-  achievements = [
+  achievements = signal([
     'Completed AWS CloudQuest: Cloud Practitioner with hands-on experience with AWS Cloud Services and security services.',
     'Solved 200+ problems on LeetCode, strengthening problem-solving and algorithmic skills.',
-  ];
+  ]);
 
-  leadership = [
+  leadership = signal([
     {
       title: 'Management and Records Head',
       period: 'April 2025 – Present',
@@ -100,5 +100,5 @@ export class About {
       description:
         'Served as a liaison between the NGO and the Super Lead to facilitate seamless coordination.',
     },
-  ];
+  ]);
 }

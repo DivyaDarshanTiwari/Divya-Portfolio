@@ -1,6 +1,6 @@
 <div class="overflow-hidden w-full">
   <div class="flex items-center gap-2 sm:gap-4 md:gap-6" style="transition: transform 0.05s linear">
-    @for(skill of skills; track skill) {
+    @for(skill of skills(); track skill) {
     <ng-container>
       <div
         class="flex items-center justify-center transition-transform transform hover:scale-110 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"

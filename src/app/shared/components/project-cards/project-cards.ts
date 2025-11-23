@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterLink } from '@angular/router';
 
@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './project-cards.css',
 })
 export class ProjectCards {
-  @Input() project: any;
+  project = input<any>();
 }

@@ -5,7 +5,7 @@
     Projects
   </h2>
   <div class="space-y-6 space-x-8 flex justify-center flex-wrap">
-    @for( project of projects; track project){
+    @for( project of projects(); track project){
     <app-project-cards [project]="project"></app-project-cards>
     }
   </div>
