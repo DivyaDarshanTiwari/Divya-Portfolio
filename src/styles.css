@@ -4,3 +4,21 @@
 .mat-mdc-tooltip .mdc-tooltip__surface {
   @apply bg-gray-600 text-white rounded-xl;
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+app-footer {
+  margin-top: auto; /* Push footer to bottom */
+}

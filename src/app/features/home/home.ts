@@ -1,9 +1,10 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { SkillCarousel } from '../../shared/components/skill-carousel/skill-carousel';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [SkillCarousel],
+  imports: [SkillCarousel, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

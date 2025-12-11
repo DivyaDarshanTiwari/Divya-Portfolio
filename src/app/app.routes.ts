@@ -20,4 +20,9 @@ export const routes: Routes = [
         (m) => m.ProjectDetailsComponent
       ),
   },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./shared/components/contact-form/contact-form').then((m) => m.ContactForm),
+  },
 ];
